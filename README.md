@@ -12,11 +12,6 @@ Creating this repo to maintain and update the code for Machine Learning group Pr
 ## Objective
 ### The goal of our project is to apply machine learning techniques to contextual information generation domain of answering questions automatically.
 
-## Team Members
-- Devansh
-- Vineet
-- Rahul
-
 ## Dataset
 We are using a dataset in SQUAD format. SQUAD datasets are a perfect fit to create a Question-Answer model. There are many SQUAD dataset readily available in on the internet, upon which we can implement our Question-Answering model. But we choose to take a pre existing dataset from [here](https://github.com/rajpurkar/SQuAD-explorer/tree/master/dataset) and make a new dataset of own by adding few more contexts and question using the Haystack Annotation tool [link](https://www.deepset.ai/annotation-tool-for-labeling-datasets).
 
