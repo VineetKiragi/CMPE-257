@@ -27,7 +27,8 @@ We would be building a question answering model that would answer the questions 
 
 The goal would be to train and fit the model on the train dataset fro Question Answer pairs on a particular context. So that it can generate answers to unseen questions on the same context.
 
-##Potential methods
+## Potential Methods
+
 We are looking to import a model from hugging face library  which is custom built for SQUAD dataset types. 
 
 The dataset that is built using the haystack will be used to train a question answering model. We would search for potential models that would best work for the question answering models on Hugging face. 
