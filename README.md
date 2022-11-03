@@ -20,10 +20,15 @@ Steps followed to create the Dataset
 1. Use the same exisitng dataset from the above [link](https://github.com/rajpurkar/SQuAD-explorer/tree/master/dataset).
 2. Add our own contexts and Questions and Answers using the above mentioned annotation tool.
 3. Export the dataset in SQUAD format which will be json file.
-## Approach
+## Problem Description
 Question answering is a critical NLP problem and a long-standing artificial intelligence milestone. QA systems allow a user to express a question in natural language and get an immediate and brief response
 
 We would be building a question answering model that would answer the questions related to a particular paragraph that the model has been trained on. Putting it simply, it is a reading comprehension model. Here a SQuAD(Stanford Question Answering Dataset) format dataset will be used, which contains nested dictionaries. These nested dictionaries have the title, paragraph as the keys. These would internally contain the context i.e, the description of the context. It also has questions, boolean to tell whether the questions could be answered or not, answer for the particular question etc. 
+
+The goal would be to train and fit the model on the train dataset fro Question Answer pairs on a particular context. So that it can generate answers to unseen questions on the same context.
+
+##Potential methods
+We are looking to import a model from hugging face library  which is custom built for SQUAD dataset types. 
 
 The dataset that is built using the haystack will be used to train a question answering model. We would search for potential models that would best work for the question answering models on Hugging face. 
 
