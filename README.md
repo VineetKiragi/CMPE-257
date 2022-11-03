@@ -2,7 +2,7 @@
 ## Team Members
 - Devansh
 - Vineet
-- Rahul
+- Rahul - RahulRaghava1
 
 # CMPE-257
 Creating this repo to maintain and update the code for Machine Learning group Project
