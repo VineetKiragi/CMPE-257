@@ -1,7 +1,7 @@
 # NLP Question-Answering model on a SQUAD dataset.
 ## Team Members
 - Devansh
-- Vineet
+- Vineet - VineetKiragi
 - Rahul - RahulRaghava1
 
 # CMPE-257
