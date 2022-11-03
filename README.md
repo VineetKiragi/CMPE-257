@@ -35,10 +35,10 @@ DistilBERT is a small, fast, cheap, and light Transformer model trained by disti
 
 The advantages of this model or the reason to choose this model over others are
 
-● It has 40% fewer parameters than Bert-base-uncased which is an older version of the model.
-● Runs 60% faster while preserving over 95% of BERT's performances as measured on the GLUE language understanding benchmark.
-● It is cheaper, smaller, faster, and uses less processing power(GPU) than the older versions of the model.
-● It is the best-suited and latest available Question Answer problem set application with SQUAD data.
+-It has 40% fewer parameters than Bert-base-uncased which is an older version of the model.
+-Runs 60% faster while preserving over 95% of BERT's performances as measured on the GLUE language understanding benchmark.
+-It is cheaper, smaller, faster, and uses less processing power(GPU) than the older versions of the model.
+-It is the best-suited and latest available Question Answer problem set application with SQUAD data.
 
 The model would learn from the context with the already defined question and answers. Later, it would be tested to answer questions that are new to the model. 
 
