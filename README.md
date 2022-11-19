@@ -1,6 +1,6 @@
 # NLP Question-Answering model on a SQUAD dataset.
 ## Team Members
-- Devansh
+- Devansh Modi - sjsudev
 - Vineet - VineetKiragi
 - Rahul - RahulRaghava1
 
