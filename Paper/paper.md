@@ -20,9 +20,16 @@ Pizza [@pizza2000identification] is an understudied yet widely utilized implemen
 # Introduction (Vineet)
 
 # Methods (All)
-1. Vineet
-2. Rahul
-3. Devansh
+
+## Vineet
+
+## Applying BERT Uncased Whole Word Masking with Squad Benchmarking (Devansh)
+
+In this method, I explore the following:
+- What it means for BERT to achieve "human-level performance on question-answering"? 
+- Is using BERT a powerful search technique for question-answering?
+
+## Rahul
 
 # Comparisons (Mainly linear vs BERT - Vineet/Devansh / Rahul for BERT comparison)
 
