@@ -26,6 +26,10 @@ Reading Comprehension (RC), or the ability to read text and then answer question
 
 ## Vineet
 
+Implemented the basic bert base uncased model for the Dataset we created by importing a model from Hugging face. Have written in detail about why choose this model in paper. To run the imported models from hugging face the data needs to be in a particular format. So parsed the data which is in json format to create 3 lists of contexts, questions and answers, which is the required format. Then created embeddings of the data using the recommended tokenizer from haystack. Using model.train command tried to fine tune the model to fit our Dataset. And checking the accuracy using a validation dataset. All this is implemented in a single Jupiter notebook in a single git commit with linkLinks to an external site.
+
+Implemented a linear model using Euclidean distance and cosine similarity. To achieve this, first I created the embeddings of the data using Facebooks Infersent embeddings, which uses sematic embeddings of the data. The creation of embeddings is implemented in a single notebook in a single git commit with link Links to an external site.. using Euclidean Furthermore using the sentence embeddings created a unsupervised learning model is developed using Euclidean distance and cosine similarity which will figure out the sentence nearest to question in the context which in turn might contain similarity since all the question are from context. The unsupervised model is implemented in a single notebook in a single git commit with link.
+
 ## Applying BERT Large Uncased Whole Word Masking with Squad Benchmarking (Devansh)
 
 This technique uses an English language pre-trained model by employing masked language modeling (MLM) scheme. 
