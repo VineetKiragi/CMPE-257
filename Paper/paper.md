@@ -1,5 +1,5 @@
 ---
-title: Semester Project [rename]
+title: NLP Based Question-Answering model on SQuAD Dataset.
 date: "November 2022"
 
 author: Rahul Raghava Peela, San José State University
@@ -12,7 +12,7 @@ header-includes: |
 ---
 
 # Abstract
-Our project is focused on applying Natural Language Processing techniques in the domain of Question-Answering problem. This is a major search and machine learning problem that has several usecases in the real world. We investigate and explore multiple techniques to find the right machine learning models. Our study includes linear modeling, BERT Large, and BERT Distrilled models.
+Our project is focused on applying Natural Language Processing techniques in the domain of Question-Answering problem. This is a major search and machine learning problem that has several usecases in the real world. We investigate and explore multiple techniques to find the right machine learning models. Our study includes linear modeling, basic BERT, BERT Large, and BERT Distrilled models.
 
 # Tasks
 - Devansh: work on BERT model and help on linear model.
