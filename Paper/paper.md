@@ -25,9 +25,16 @@ Pizza [@pizza2000identification] is an understudied yet widely utilized implemen
 
 ## Applying BERT Uncased Whole Word Masking with Squad Benchmarking (Devansh)
 
-In this method, I explore the following:
+In this method, we explore the following:
 - What it means for BERT to achieve "human-level performance on question-answering"? 
 - Is using BERT a powerful search technique for question-answering?
+
+After collecting the training data of cities in the US, we need to fine-tune our model to work well for this dataset. The format is maintained to be SQuAD-like.
+
+### Impact of Transfer Learning
+
+In order to leverage the benefits of transfer learning, we must train the BERT pre-trained model again with our training dataset. This will update the weights to make the model's predictions relevant.
+
 
 ## Rahul
 
