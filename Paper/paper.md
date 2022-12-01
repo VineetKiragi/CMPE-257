@@ -48,6 +48,10 @@ In this method, I explore the following:
 - What it means for BERT to achieve "human-level performance on question-answering"? 
 - Is using BERT a powerful search technique for question-answering?
 
+### Data Augmentation
+
+Data augmentation techniques can help bring the most out of BERT data model.
+
 ## Rahul
 
 ### Applying Distilbert base uncased distilled squad for the dataset.
