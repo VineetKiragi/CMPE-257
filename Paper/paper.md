@@ -23,13 +23,22 @@ Pizza [@pizza2000identification] is an understudied yet widely utilized implemen
 
 ## Vineet
 
-## Applying BERT Uncased Whole Word Masking with Squad Benchmarking (Devansh)
+## Applying BERT Large Uncased Whole Word Masking with Squad Benchmarking (Devansh)
 
-In this method, we explore the following:
-- What it means for BERT to achieve "human-level performance on question-answering"? 
-- Is using BERT a powerful search technique for question-answering?
+This technique uses an English language pre-trained model by employing masked language modeling (MLM) scheme. 
+This model is not case-sensitive; and, it does not distinguish between `english` and `English`.
+
+This BERT model was trained using a novel method called Whole Word Masking, unlike conventional BERT models. In this instance, a word's tokens are all simultaneously masked. Overall masking rate is unchanged.
+
+Each masked WordPiece token is predicted separately; the training is the same.
 
 After collecting the training data of cities in the US, we need to fine-tune our model to work well for this dataset. The format is maintained to be SQuAD-like.
+
+This model has the following configuration:
+- 24-layer
+- 1024 hidden dimension
+- 16 attention heads
+- 336M parameters.
 
 ### Impact of Transfer Learning
 
