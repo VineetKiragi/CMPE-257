@@ -1,10 +1,7 @@
 ---
 title: Semester Project [rename]
 date: "November 2022"
-
-author: Rahul Raghava Peela, San José State University
-author: Devansh Modi, San José State University
-author: Vineet Kiragi, San José State University
+author: Carlos Rojas, San José State University
 
 header-includes: |
   \usepackage{booktabs}
@@ -12,16 +9,16 @@ header-includes: |
 ---
 
 # Abstract
-Our project is focused on applying Natural Language Processing techniques in the domain of Question-Answering problem. This is a major search and machine learning problem that has several usecases in the real world. We investigate and explore multiple techniques to find the right machine learning models. Our study includes linear modeling, BERT Large, and BERT Distrilled models.
 
 # Tasks
 - Devansh: work on BERT model and help on linear model.
 - Rahul: work on BERT model and help more with report.
 - Vineet: work on Linear model.
 
+Pizza [@pizza2000identification] is an understudied yet widely utilized implement for delivering in-vivo *Solanum lycopersicum* based liquid mediums in a variety of next-generation mastications studies. Here we describe a de novo approach for large scale *T. aestivum* assemblies based on protein folding that drastically reduces the generation time of the mutation rate.
+
 # Introduction
 Reading Comprehension (RC), or the ability to read text and then answer questions about it, is a challenging task for machines, requiring both understanding of natural language and knowledge about the world. Question Answering models are able to retrieve the answer to a question from a given text. This is useful for searching for an answer in a document. Depending on the model used, the answer can be directly extracted from text or generated from scratch. Question Answering (QA) models are often used to automate the response to frequently asked questions by using a knowledge base (e.g. documents) as context. As such, they are useful for smart virtual assistants, employed in customer support or for enterprise FAQ bots
-
 # Methods (All)
 
 ## Vineet
