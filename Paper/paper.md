@@ -2,9 +2,7 @@
 title: NLP Based Question-Answering model on SQuAD Dataset.
 date: "November 2022"
 
-author: Rahul Raghava Peela, San José State University
-author: Devansh Modi, San José State University
-author: Vineet Kiragi, San José State University
+author: Rahul Raghava Peela, Devansh Modi, Vineet Kiragi, San José State University
 
 header-includes: |
   \usepackage{booktabs}
@@ -21,6 +19,33 @@ Our project is focused on applying Natural Language Processing techniques in the
 
 # Introduction
 Reading Comprehension (RC), or the ability to read text and then answer questions about it, is a challenging task for machines, requiring both understanding of natural language and knowledge about the world. Question Answering models are able to retrieve the answer to a question from a given text. This is useful for searching for an answer in a document. Depending on the model used, the answer can be directly extracted from text or generated from scratch. Question Answering (QA) models are often used to automate the response to frequently asked questions by using a knowledge base (e.g. documents) as context. As such, they are useful for smart virtual assistants, employed in customer support or for enterprise FAQ bots
+
+## Why Question Answering is important in Natural Language Processing?
+
+Natural Language Processing powers some of the most customer-oriented, lifestyle assisting, and real-world oriented tools and technologies. Question-Answering has significance in many fields such as business intelligence, chatbots, and conversational analytics. 
+
+## Design of Question Answering Workflows
+
+First step of designing a question answering workflow involves building the required dataset.
+
+<p align="center">
+    <image src="assets/qa-workflow.png">
+    <b>Fig: Question Answering Workflow (Ref: FastForwardLabs) </b>
+</p>
+
+Most systems require a Document Reader, which can return an answer for the requested question. These readers in turn are trained using NLP techniques. Each model that is trained for the purpose of question-answering system requires data to be structured in a friendly manner. One of the most common structures is one introduced by Stanford.
+
+Stanford Question Answering Dataset (SQuAD) is a reading comprehension dataset, consisting of questions posed by crowdworkers on a set of Wikipedia articles, where the answer to every question is a segment of text, or span, from the corresponding reading passage, or the question might be unanswerable.
+
+*In this paper, our team has compiled our own dataset by choosing a context of the Top 150 Most Populated Cities in the United States. We have created this dataset in SQuAD format.*
+
+## Relevance of BERT
+
+BERT is a transformers model that has been pretrained on a significant body of English data in an self-supervised manner. This indicates that it was trained exclusively on the raw texts, with no human labeling of any kind (thus, it can use a lot of material that is readily available to the public), and an automatic procedure to generate inputs and labels from those texts.
+
+BERT has originally been released in base and large variations, for cased and uncased input text. The uncased models also strips out an accent markers.
+
+**In this paper, we have explored multiple BERT models and Linear models to compare their eventual performance for our dataset and context.**
 
 # Methods (All)
 
@@ -58,6 +83,11 @@ In this method, I explore the following:
 ### Data Augmentation
 
 Data augmentation techniques can help bring the most out of BERT data model.
+
+<p align="center">
+    <image src="assets/dataframe.png">
+    <b>Fig: Sample Dataframe for Question and Answers from Top 150 Cities in USA.</b>
+</p>
 
 ## Rahul
 
