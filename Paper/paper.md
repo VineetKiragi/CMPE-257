@@ -19,6 +19,7 @@ Our project presents a question-answering model based on natural language proces
 
 # Introduction
 Natural language processing (NLP) is a field of computer science and artificial intelligence that focuses on enabling computers to understand, interpret, and generate human language. One popular application of NLP is in the development of question-answering systems, which can automatically generate answers to user-provided questions based on a given dataset.The SQuAD dataset is a widely-used benchmark for evaluating the performance of NLP-based question-answering systems. In this paper, we evaluated the performace of few question-answering model that is trained on the SQuAD dataset and demonstrate its effectiveness in generating accurate and relevant answers to a wide range of questions.
+
 Overall, our results demonstrate the potential of NLP-based question-answering systems to provide valuable assistance to users seeking information from a given body of text. This work has important implications for a variety of applications, including search engines, virtual assistants, and educational platforms.
 
 ## Why Question Answering is important in Natural Language Processing?
@@ -51,6 +52,16 @@ BERT has originally been released in base and large variations, for cased and un
 # Methods (All)
 
 ## Vineet
+  ### 1. Linear Model
+  The goal of implementing the Linear model is not to reach the state of the art accuracy, but to learn different NLP concepts, implement them and explore more solutions. but to check if we could fit a Linear model with decent enough results. However, my goal is not to reach the state of the art accuracy but to learn different NLP concepts, implement them and explore more solutions. Starting with basic models to know the baseline has been the approach here. The model will focus on **Facebook sentence embeddings** and how it can be used in building QA systems.
+  ### Infersent, Facebook Sentence Embedding
+  The basic idea behind all these embeddings is to use vectors of various dimensions to represent entities numerically, which makes it easier for computers to understand them for various downstream tasks. Traditionally, the average of vectors of all the words in a sentence is called the bag of words approach. Each sentence is tokenized to words, vectors for these words can be found using glove embeddings and then take the average of all these vectors. This technique has performed decently, but this is not a very accurate approach as it does not take care of the order of words. But [Infersent from Facebook](https://github.com/facebookresearch/InferSent) is a sentence embeddings method that provides semantic sentence representations. It is trained on natural language inference data and generalizes well to many different tasks.
+  
+  
+  
+  
+  
+  2. Bert-Base-Uncased
 
 Implemented the basic bert base uncased model for the Dataset we created by importing a model from Hugging face. Have written in detail about why choose this model in paper. To run the imported models from hugging face the data needs to be in a particular format. So parsed the data which is in json format to create 3 lists of contexts, questions and answers, which is the required format. Then created embeddings of the data using the recommended tokenizer from haystack. Using model.train command tried to fine tune the model to fit our Dataset. And checking the accuracy using a validation dataset. All this is implemented in a single Jupiter notebook in a single git commit with linkLinks to an external site.
 
