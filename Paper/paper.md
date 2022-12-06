@@ -10,7 +10,7 @@ header-includes: |
 ---
 
 # Abstract
-Our project is focused on applying Natural Language Processing techniques in the domain of Question-Answering problem. This is a major search and machine learning problem that has several usecases in the real world. We investigate and explore multiple techniques to find the right machine learning models. Our study includes linear modeling, basic BERT, BERT Large, and BERT Distrilled models.
+Our project presents a question-answering model based on natural language processing (NLP) techniques, which was trained and evaluated on the Stanford Question Answering Dataset (SQuAD). This is a major search and machine learning problem that has several usecases in the real world. We investigate and explore multiple techniques to find the right machine learning models. The model uses a combination of word embedding to generate vector representations of words, sentences, and contexts, which are then used to generate answers to questions. Our study includes linear modeling, basic BERT, BERT Large, and BERT Distrilled models. The results of our experiments show that the model achieves decent performances on the SQuAD dataset, demonstrating its effectiveness in answering a wide range of questions from the given contexts.
 
 # Tasks
 - Devansh: work on BERT model and help on linear model.
@@ -18,7 +18,8 @@ Our project is focused on applying Natural Language Processing techniques in the
 - Vineet: work on Linear model.
 
 # Introduction
-Reading Comprehension (RC), or the ability to read text and then answer questions about it, is a challenging task for machines, requiring both understanding of natural language and knowledge about the world. Question Answering models are able to retrieve the answer to a question from a given text. This is useful for searching for an answer in a document. Depending on the model used, the answer can be directly extracted from text or generated from scratch. Question Answering (QA) models are often used to automate the response to frequently asked questions by using a knowledge base (e.g. documents) as context. As such, they are useful for smart virtual assistants, employed in customer support or for enterprise FAQ bots
+Natural language processing (NLP) is a field of computer science and artificial intelligence that focuses on enabling computers to understand, interpret, and generate human language. One popular application of NLP is in the development of question-answering systems, which can automatically generate answers to user-provided questions based on a given dataset.The SQuAD dataset is a widely-used benchmark for evaluating the performance of NLP-based question-answering systems. In this paper, we evaluated the performace of few question-answering model that is trained on the SQuAD dataset and demonstrate its effectiveness in generating accurate and relevant answers to a wide range of questions.
+Overall, our results demonstrate the potential of NLP-based question-answering systems to provide valuable assistance to users seeking information from a given body of text. This work has important implications for a variety of applications, including search engines, virtual assistants, and educational platforms.
 
 ## Why Question Answering is important in Natural Language Processing?
 
