@@ -12,11 +12,6 @@ header-includes: |
 # Abstract
 Our project presents a question-answering model based on natural language processing (NLP) techniques, which was trained and evaluated on the Stanford Question Answering Dataset (SQuAD). This is a major search and machine learning problem that has several usecases in the real world. We investigate and explore multiple techniques to find the right machine learning models. The model uses a combination of word embedding to generate vector representations of words, sentences, and contexts, which are then used to generate answers to questions. Our study includes linear modeling, basic BERT, BERT Large, and BERT Distrilled models. The results of our experiments show that the model achieves decent performances on the SQuAD dataset, demonstrating its effectiveness in answering a wide range of questions from the given contexts.
 
-# Tasks
-- Devansh: work on BERT model and help on linear model.
-- Rahul: work on BERT model and help more with report.
-- Vineet: work on Linear model.
-
 # Introduction
 Natural language processing (NLP) is a field of computer science and artificial intelligence that focuses on enabling computers to understand, interpret, and generate human language. One popular application of NLP is in the development of question-answering systems, which can automatically generate answers to user-provided questions based on a given dataset.The SQuAD dataset is a widely-used benchmark for evaluating the performance of NLP-based question-answering systems. In this paper, we evaluated the performace of few question-answering model that is trained on the SQuAD dataset and demonstrate its effectiveness in generating accurate and relevant answers to a wide range of questions.<img width="759" alt="Screen Shot 2022-12-06 at 5 20 21 PM" src="https://user-images.githubusercontent.com/37727735/206065501-0c1d9886-d364-468b-ba50-c64f1e328717.png">
 
@@ -50,9 +45,19 @@ BERT has originally been released in base and large variations, for cased and un
 
 **In this paper, we have explored multiple BERT models and Linear models to compare their eventual performance for our dataset and context.**
 
+## Dataset Preparation
+
+In order to build the dataset for our modeling methods, we used a tool called `Haystack by Deepset`. This tool allowed us to annotate custom context with questions and answers in the SQuAD format.
+
+<p align="center">
+    <image src="assets/haystack.png">
+    <b>Fig: Sample Annotation of San Bernardino in Haystack.</b>
+</p>
+
+For each city in our training set, we have stored the context, question, and text as seen in the figure above.
+
 # Methods (All)
 
-## Vineet
   ### 1. Linear Model
   The goal of implementing the Linear model is not to reach the state of the art accuracy, but to learn different NLP concepts, implement them and explore more solutions. but to check if we could fit a Linear model with decent enough results. However, my goal is not to reach the state of the art accuracy but to learn different NLP concepts, implement them and explore more solutions. Starting with basic models to know the baseline has been the approach here. The model will focus on **Facebook sentence embeddings** and how it can be used in building QA systems.
   ### Infersent, Facebook Sentence Embedding
@@ -82,7 +87,7 @@ Implemented the basic bert base uncased model for the Dataset we created by impo
 
 Implemented a linear model using Euclidean distance and cosine similarity. To achieve this, first I created the embeddings of the data using Facebooks Infersent embeddings, which uses sematic embeddings of the data. The creation of embeddings is implemented in a single notebook in a single git commit with link Links to an external site.. using Euclidean Furthermore using the sentence embeddings created a unsupervised learning model is developed using Euclidean distance and cosine similarity which will figure out the sentence nearest to question in the context which in turn might contain similarity since all the question are from context. The unsupervised model is implemented in a single notebook in a single git commit with link.
 
-## Applying BERT Large Uncased Whole Word Masking with Squad Benchmarking (Devansh)
+## Applying BERT Large Uncased Whole Word Masking with Squad Benchmarking
 
 This technique uses an English language pre-trained model by employing masked language modeling (MLM) scheme. 
 This model is not case-sensitive; and, it does not distinguish between `english` and `English`.
@@ -116,8 +121,6 @@ Data augmentation techniques can help bring the most out of BERT data model.
     <b>Fig: Sample Dataframe for Question and Answers from Top 150 Cities in USA.</b>
 </p>
 
-## Rahul
-
 ### Applying Distilbert base uncased distilled squad for the dataset.
 
 DistilBert base uncased distilled squad is a state-of-the-art natural language processing (NLP) model developed by Hugging Face. It is a smaller, faster, and more efficient version of the popular BERT model, which has been fine-tuned on the SQuAD dataset for question-answering tasks. This configuration uses the `uncased` version of the BERT model, which means that it is not sensitive to the casing of the input text.
@@ -125,10 +128,6 @@ DistilBert base uncased distilled squad is a state-of-the-art natural language p
 * Distilbert is a small, fast, cheap, and light transformer model trained by disitilled BERT base.
 * It has 40% fewer parameters then Bert based uncased which is an older version of the model.
 * It is the best suited and latest available Question Answer problem set application with SQuAD data.
-  
-  
-  
-  
   
   
   ![Screenshot (34)](https://user-images.githubusercontent.com/117317413/206058662-3129907b-46b7-4f04-866f-2f70d823377f.png)
