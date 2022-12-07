@@ -78,9 +78,15 @@ BERT has originally been released in base and large variations, for cased and un
   <img src="https://user-images.githubusercontent.com/37727735/206064906-c3012e84-b957-4f8b-a584-da44a0c5a87a.png" width="210" />
   <img src="https://user-images.githubusercontent.com/37727735/206065527-9c3728e3-ada6-44fb-b6f5-253bb5edfe52.png" width="759", height="210" /> 
 </p>
-Implemented the basic bert base uncased model for the Dataset we created by importing a model from Hugging face. Have written in detail about why choose this model in paper. To run the imported models from hugging face the data needs to be in a particular format. So parsed the data which is in json format to create 3 lists of contexts, questions and answers, which is the required format. Then created embeddings of the data using the recommended tokenizer from haystack. Using model.train command tried to fine tune the model to fit our Dataset. And checking the accuracy using a validation dataset. All this is implemented in a single Jupiter notebook in a single git commit with linkLinks to an external site.
 
-Implemented a linear model using Euclidean distance and cosine similarity. To achieve this, first I created the embeddings of the data using Facebooks Infersent embeddings, which uses sematic embeddings of the data. The creation of embeddings is implemented in a single notebook in a single git commit with link Links to an external site.. using Euclidean Furthermore using the sentence embeddings created a unsupervised learning model is developed using Euclidean distance and cosine similarity which will figure out the sentence nearest to question in the context which in turn might contain similarity since all the question are from context. The unsupervised model is implemented in a single notebook in a single git commit with link.
+Implementation of the basic bert uncased model
+- Importing the model from Hugging face.
+- Converting the data into the format required by the hugging face model.
+- Importing the suggesting tokenizer fromhugging face and toeknizing all the sentences, questions and answers and creating embeddings.
+- Training the model using the train Dataset and finetune it to our Dataset.
+- Checking for accuracy of the model using validation dataset.
+
+The basic bert model was fitting not that well to the data. The accuracy was around 35%. This was expected because of the model is the most basic version of BERT and it is not expected to perform that greatly. The perameters trained in here are also not that many when compared to other models. Sp the performance variables are expected.
 
 ## Applying BERT Large Uncased Whole Word Masking with Squad Benchmarking (Devansh)
 
