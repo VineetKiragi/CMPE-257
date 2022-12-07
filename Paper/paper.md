@@ -92,7 +92,7 @@ Implementation of the basic bert uncased model
 
 The basic bert model was fitting not that well to the data. The accuracy was around 35%. This was expected because of the model is the most basic version of BERT and it is not expected to perform that greatly. The perameters trained in here are also not that many when compared to other models. Sp the performance variables are expected.
 
-## Applying BERT Large Uncased Whole Word Masking with Squad Benchmarking
+## 3. BERT Large Uncased Whole Word Masking with Squad Benchmarking
 
 This technique uses an English language pre-trained model by employing masked language modeling (MLM) scheme. 
 This model is not case-sensitive; and, it does not distinguish between `english` and `English`.
@@ -126,7 +126,7 @@ Data augmentation techniques can help bring the most out of BERT data model.
     <b>Fig: Sample Dataframe for Question and Answers from Top 150 Cities in USA.</b>
 </p>
 
-### Applying Distilbert base uncased distilled squad for the dataset.
+## 4. Applying Distilbert base uncased distilled squad for the dataset.
 
 DistilBert base uncased distilled squad is a state-of-the-art natural language processing (NLP) model developed by Hugging Face. It is a smaller, faster, and more efficient version of the popular BERT model, which has been fine-tuned on the SQuAD dataset for question-answering tasks. This configuration uses the `uncased` version of the BERT model, which means that it is not sensitive to the casing of the input text.
   
