@@ -183,7 +183,7 @@ The below shown screenshot has one of the context from our data. In this we have
   
   
   
-# Conclusions (Devansh)
-
+# Conclusions
+In conclusion, the NLP-based question-answering model on the SQuAD dataset shows promising results and demonstrates the potential for natural language processing techniques to accurately answer questions based on a given context. All the 3 model's performance on the SQuAD dataset indicates that it is able to effectively understand the intent behind a question and retrieve the appropriate information from the provided context. Further research and development in this area has the potential to improve the model's performance and expand its capabilities, leading to more effective and efficient question-answering systems.
 
 # References
