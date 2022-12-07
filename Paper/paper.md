@@ -68,7 +68,16 @@ BERT has originally been released in base and large variations, for cased and un
   ### Unsupervised model 
   Unsupervised Learning is not using the target variable. Here, the model returns the sentence from the paragraph which has the minimum distance from the given question. First the euclidean distance was used to detect the sentence having minimum distance from the question. The accuracy of this model came around 33% but, when switched to cosine similarity the accuracy improved slightly from 33% to 38%. This makes sense because euclidean distance does not care for alignment or angle between the vectors whereas cosine takes care of that. Direction is important in case of vectorial representations.
   
-  2. Bert-Base-Uncased
+  ### 1. Bert Base Uncased Model
+  Bert Base Uncased Model is a pretrained model on English language using a masked language modeling (MLM) objective. It was introduced in this [paper](https://arxiv.org/pdf/1810.04805.pdf). This model is uncased: it does not make a difference between english and English.
+  
+  
+  
+  
+  
+  
+  
+  
 
 Implemented the basic bert base uncased model for the Dataset we created by importing a model from Hugging face. Have written in detail about why choose this model in paper. To run the imported models from hugging face the data needs to be in a particular format. So parsed the data which is in json format to create 3 lists of contexts, questions and answers, which is the required format. Then created embeddings of the data using the recommended tokenizer from haystack. Using model.train command tried to fine tune the model to fit our Dataset. And checking the accuracy using a validation dataset. All this is implemented in a single Jupiter notebook in a single git commit with linkLinks to an external site.
 
