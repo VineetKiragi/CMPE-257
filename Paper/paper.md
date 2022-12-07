@@ -118,19 +118,27 @@ DistilBert base uncased distilled squad is a state-of-the-art natural language p
 * It has 40% fewer parameters then Bert based uncased which is an older version of the model.
 * It is the best suited and latest available Question Answer problem set application with SQuAD data.
   
+  
+  
+  
+  
+  
+  ![Screenshot (34)](https://user-images.githubusercontent.com/117317413/206058662-3129907b-46b7-4f04-866f-2f70d823377f.png)
+
+  
  This model has the following configuration:
 - 12-layers
 - 768 hidden units
 - 12 attention heads 
 - 66M parameters.
+  
+Embeddings in DistiBert:
+
+Word embeddings are generated using a technique called word encoding. This involves representing each word in the input text as a fixed-length vector of numbers, which captures the semantic meaning of the word in a numerical form. These vectors are then used as input to the model, allowing it to process the input text and generate a response
 
 ### Implementation Details:
 
-The Distilbert is a pre-trained model in hugging face. It is especially trained for the SQuAD Dataset and Coco Dataset. So, we have used the pretrained model to fit into our custom dataset. Here, a framework known as Haystack had to be imported inorder to use the libray FARMReader which is especially dedicated to import the model from hugging face. 
-
-Embeddings in DistiBert:
-
-Word embeddings are generated using a technique called word encoding. This involves representing each word in the input text as a fixed-length vector of numbers, which captures the semantic meaning of the word in a numerical form. These vectors are then used as input to the model, allowing it to process the input text and generate a response.
+The Distilbert is a pre-trained model in hugging face. It is especially trained for the SQuAD Dataset and Coco Dataset. So, we have used the pretrained model to fit into our custom dataset. Here, a framework known as Haystack had to be imported inorder to use the libray FARMReader which is especially dedicated to import the model from hugging face. .
   
 After importing the model, the model is fit to the training dataset that we prepared and tried to fine tune the model by tweaking some hyperparameters such as number of epochs etc. While training the model it could be observed that at some point in the training, the training is getting to the least. So, in resemblence with the pocket algorithm the model is storing the most optimised parameters where it achieved the least training error and that particular weights of the model are being stored. Now, with this model we tested it on the test file that we created. We have taken a ratio of 80:20 to split the dataset into train and test respectively. Which yielded an F1 score of 0.5418, Exact Match of 0.2247191, top_n_accuracy of 0.80898. We have given an context that is not related to california but from India. Astonishingly, the model could predict well enough. 
 
