@@ -167,6 +167,16 @@ After importing the model, the model is fit to the training dataset that we prep
   
 # Example Analysis (Devansh)
 
+  ![Context1](https://user-images.githubusercontent.com/117317413/206071743-a99737d5-b24d-46ff-99d6-d59bf33acfd5.JPG)
+
+  
+  
+  
+![Prediction1](https://user-images.githubusercontent.com/117317413/206071821-1bb460d6-7ab3-4217-b5eb-d38c4eafb502.JPG)
+
+  
+  
+  
 # Conclusions (Devansh)
 
 
