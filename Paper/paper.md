@@ -68,7 +68,15 @@ BERT has originally been released in base and large variations, for cased and un
   ### Unsupervised model 
   Unsupervised Learning is not using the target variable. Here, the model returns the sentence from the paragraph which has the minimum distance from the given question. First the euclidean distance was used to detect the sentence having minimum distance from the question. The accuracy of this model came around 33% but, when switched to cosine similarity the accuracy improved slightly from 33% to 38%. This makes sense because euclidean distance does not care for alignment or angle between the vectors whereas cosine takes care of that. Direction is important in case of vectorial representations.
   
-  2. Bert-Base-Uncased
+  ### 2. Bert-Base-Uncased
+  The BERT base uncased model is a state-of-the-art natural language processing model developed by Google. It is based on the BERT (Bidirectional Encoder Representations from Transformers) architecture, which uses a deep neural network trained on a large amount of unstructured text data to produce highly accurate results when processing and generating human-like language. The "uncased" version of the model means that it is not case-sensitive, meaning that it does not distinguish between uppercase and lowercase letters when processing text. Bert Base Uncased Model is a pretrained model on English language using a masked language modeling (MLM) objective. It was introduced in this [paper](https://arxiv.org/pdf/1810.04805.pdf).
+  
+  The Transformer architecture makes it possible to parallelize ML training extremely efficiently. Massive parallelization thus makes it feasible to train BERT on large amounts of data in a relatively short period of time. Transformers work by leveraging attention, a powerful deep-learning algorithm, first seen in computer vision models. Transformers create differential weights signaling which words in a sentence are the most critical to further process. A transformer does this by successively processing an input through a stack of transformer layers, usually called the encoder. If necessary, another stack of transformer layers - the decoder - can be used to predict a target output. BERT however, doesn’t use a decoder.
+  
+  
+  <img width="210" alt="Screen Shot 2022-12-06 at 5 01 27 PM" src="https://user-images.githubusercontent.com/37727735/206064906-c3012e84-b957-4f8b-a584-da44a0c5a87a.png">
+
+  
 
 Implemented the basic bert base uncased model for the Dataset we created by importing a model from Hugging face. Have written in detail about why choose this model in paper. To run the imported models from hugging face the data needs to be in a particular format. So parsed the data which is in json format to create 3 lists of contexts, questions and answers, which is the required format. Then created embeddings of the data using the recommended tokenizer from haystack. Using model.train command tried to fine tune the model to fit our Dataset. And checking the accuracy using a validation dataset. All this is implemented in a single Jupiter notebook in a single git commit with linkLinks to an external site.
 
@@ -144,18 +152,6 @@ After importing the model, the model is fit to the training dataset that we prep
 
 # Comparisons (Mainly linear vs BERT - Vineet/Devansh / Rahul for BERT comparison)
 
-  
-  
-  
-  
-  
-  ![Result1](https://user-images.githubusercontent.com/117317413/206062014-f32ad731-6926-406c-abc8-30f3ae7fb078.JPG)
-
-  
-  
-  
-  
-  
 # Example Analysis (Devansh)
 
 # Conclusions (Devansh)
