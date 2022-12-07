@@ -154,7 +154,7 @@ The Distilbert is a pre-trained model in hugging face. It is especially trained 
   
 After importing the model, the model is fit to the training dataset that we prepared and tried to fine tune the model by tweaking some hyperparameters such as number of epochs etc. While training the model it could be observed that at some point in the training, the training is getting to the least. So, in resemblence with the pocket algorithm the model is storing the most optimised parameters where it achieved the least training error and that particular weights of the model are being stored. Now, with this model we tested it on the test file that we created. We have taken a ratio of 80:20 to split the dataset into train and test respectively. Which yielded an F1 score of 0.5418, Exact Match of 0.2247191, top_n_accuracy of 0.80898. We have given an context that is not related to california but from India. Astonishingly, the model could predict well enough. 
 
-# Comparisons (Mainly linear vs BERT - Vineet/Devansh / Rahul for BERT comparison)
+# Comparisons
 
   
   ![Result1](https://user-images.githubusercontent.com/117317413/206068803-3691327b-74da-4fda-a9e5-703deca8f30a.JPG)
@@ -167,8 +167,8 @@ Our first step in the analysis is to know what are the important embeddings in a
 For example, here is an illustration of a question, it's corelated document, and use of Nearest Neighbor method find the embeddings.
 
 <p align="center">
-    <image src="assets/vector.png">
-    <b>Fig: Sample Dataframe for Question and Answers from Top 150 Cities in USA.</b>
+    <image src="assets/vector.png"><br>
+    <b>Fig: Word Embeddings of a Question</b>
 </p>
 
 The below shown screenshot has one of the context from our data. In this we have few sentences about Los Angeles. Using which our model would predict the answer for the questions asked.
