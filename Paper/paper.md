@@ -60,7 +60,7 @@ BERT has originally been released in base and large variations, for cased and un
   Creating Embeddings from Infersent and finding similarity
   - Create a vocabulary from the training data and use this vocabulary to train infersent model.
   - Once the model is trained, provide sentence as input to the encoder function which will return a 4096-dimensional vector irrespective of the number of words in the sentence.
-  - Break the paragraph/context into multiple sentences using the package for processing text data [Textblob](https://textblob.readthedocs.io/en/dev/) Textblob. 
+  - Break the paragraph/context into multiple sentences using the package for processing text data [Textblob](https://textblob.readthedocs.io/en/dev/). 
   - Get the vector representation of each sentence and question using Infersent mode. An example is shown below.
   <img width="1091" alt="Screen Shot 2022-12-06 at 3 52 49 PM" src="https://user-images.githubusercontent.com/37727735/206051149-7b3d601c-2dc2-422c-be39-0e83b296ba3c.png">
   - Create features like distance, based on cosine similarity and Euclidean distance for each sentence-question pair
