@@ -18,7 +18,8 @@ Our project presents a question-answering model based on natural language proces
 - Vineet: work on Linear model.
 
 # Introduction
-Natural language processing (NLP) is a field of computer science and artificial intelligence that focuses on enabling computers to understand, interpret, and generate human language. One popular application of NLP is in the development of question-answering systems, which can automatically generate answers to user-provided questions based on a given dataset.The SQuAD dataset is a widely-used benchmark for evaluating the performance of NLP-based question-answering systems. In this paper, we evaluated the performace of few question-answering model that is trained on the SQuAD dataset and demonstrate its effectiveness in generating accurate and relevant answers to a wide range of questions.
+Natural language processing (NLP) is a field of computer science and artificial intelligence that focuses on enabling computers to understand, interpret, and generate human language. One popular application of NLP is in the development of question-answering systems, which can automatically generate answers to user-provided questions based on a given dataset.The SQuAD dataset is a widely-used benchmark for evaluating the performance of NLP-based question-answering systems. In this paper, we evaluated the performace of few question-answering model that is trained on the SQuAD dataset and demonstrate its effectiveness in generating accurate and relevant answers to a wide range of questions.<img width="759" alt="Screen Shot 2022-12-06 at 5 20 21 PM" src="https://user-images.githubusercontent.com/37727735/206065501-0c1d9886-d364-468b-ba50-c64f1e328717.png">
+
 
 Overall, our results demonstrate the potential of NLP-based question-answering systems to provide valuable assistance to users seeking information from a given body of text. This work has important implications for a variety of applications, including search engines, virtual assistants, and educational platforms.
 
@@ -72,12 +73,11 @@ BERT has originally been released in base and large variations, for cased and un
   The BERT base uncased model is a state-of-the-art natural language processing model developed by Google. It is based on the BERT (Bidirectional Encoder Representations from Transformers) architecture, which uses a deep neural network trained on a large amount of unstructured text data to produce highly accurate results when processing and generating human-like language. The "uncased" version of the model means that it is not case-sensitive, meaning that it does not distinguish between uppercase and lowercase letters when processing text. Bert Base Uncased Model is a pretrained model on English language using a masked language modeling (MLM) objective. It was introduced in this [paper](https://arxiv.org/pdf/1810.04805.pdf).
   
   The Transformer architecture makes it possible to parallelize ML training extremely efficiently. Massive parallelization thus makes it feasible to train BERT on large amounts of data in a relatively short period of time. Transformers work by leveraging attention, a powerful deep-learning algorithm, first seen in computer vision models. Transformers create differential weights signaling which words in a sentence are the most critical to further process. A transformer does this by successively processing an input through a stack of transformer layers, usually called the encoder. If necessary, another stack of transformer layers - the decoder - can be used to predict a target output. BERT however, doesn’t use a decoder.
-  
-  
-  <img width="210" alt="Screen Shot 2022-12-06 at 5 01 27 PM" src="https://user-images.githubusercontent.com/37727735/206064906-c3012e84-b957-4f8b-a584-da44a0c5a87a.png">
-
-  
-
+ 
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/37727735/206064906-c3012e84-b957-4f8b-a584-da44a0c5a87a.png" width="210" />
+  <img src="https://user-images.githubusercontent.com/37727735/206065527-9c3728e3-ada6-44fb-b6f5-253bb5edfe52.png" width="759", height="210" /> 
+</p>
 Implemented the basic bert base uncased model for the Dataset we created by importing a model from Hugging face. Have written in detail about why choose this model in paper. To run the imported models from hugging face the data needs to be in a particular format. So parsed the data which is in json format to create 3 lists of contexts, questions and answers, which is the required format. Then created embeddings of the data using the recommended tokenizer from haystack. Using model.train command tried to fine tune the model to fit our Dataset. And checking the accuracy using a validation dataset. All this is implemented in a single Jupiter notebook in a single git commit with linkLinks to an external site.
 
 Implemented a linear model using Euclidean distance and cosine similarity. To achieve this, first I created the embeddings of the data using Facebooks Infersent embeddings, which uses sematic embeddings of the data. The creation of embeddings is implemented in a single notebook in a single git commit with link Links to an external site.. using Euclidean Furthermore using the sentence embeddings created a unsupervised learning model is developed using Euclidean distance and cosine similarity which will figure out the sentence nearest to question in the context which in turn might contain similarity since all the question are from context. The unsupervised model is implemented in a single notebook in a single git commit with link.
