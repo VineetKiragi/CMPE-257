@@ -44,9 +44,19 @@ BERT has originally been released in base and large variations, for cased and un
 
 **In this paper, we have explored multiple BERT models and Linear models to compare their eventual performance for our dataset and context.**
 
+## Dataset Preparation
+
+In order to build the dataset for our modeling methods, we used a tool called `Haystack by Deepset`. This tool allowed us to annotate custom context with questions and answers in the SQuAD format.
+
+<p align="center">
+    <image src="assets/haystack.png">
+    <b>Fig: Sample Annotation of San Bernardino in Haystack.</b>
+</p>
+
+For each city in our training set, we have stored the context, question, and text as seen in the figure above.
+
 # Methods (All)
 
-## Vineet
   ### 1. Linear Model
   The goal of implementing the Linear model is not to reach the state of the art accuracy, but to learn different NLP concepts, implement them and explore more solutions. but to check if we could fit a Linear model with decent enough results. However, my goal is not to reach the state of the art accuracy but to learn different NLP concepts, implement them and explore more solutions. Starting with basic models to know the baseline has been the approach here. The model will focus on **Facebook sentence embeddings** and how it can be used in building QA systems.
   ### Infersent, Facebook Sentence Embedding
@@ -82,7 +92,7 @@ Implementation of the basic bert uncased model
 
 The basic bert model was fitting not that well to the data. The accuracy was around 35%. This was expected because of the model is the most basic version of BERT and it is not expected to perform that greatly. The perameters trained in here are also not that many when compared to other models. Sp the performance variables are expected.
 
-## Applying BERT Large Uncased Whole Word Masking with Squad Benchmarking (Devansh)
+## 3. BERT Large Uncased Whole Word Masking with Squad Benchmarking
 
 This technique uses an English language pre-trained model by employing masked language modeling (MLM) scheme. 
 This model is not case-sensitive; and, it does not distinguish between `english` and `English`.
@@ -116,19 +126,13 @@ Data augmentation techniques can help bring the most out of BERT data model.
     <b>Fig: Sample Dataframe for Question and Answers from Top 150 Cities in USA.</b>
 </p>
 
-## Rahul
-
-### Applying Distilbert base uncased distilled squad for the dataset.
+## 4. Distilbert base uncased distilled squad for the dataset.
 
 DistilBert base uncased distilled squad is a state-of-the-art natural language processing (NLP) model developed by Hugging Face. It is a smaller, faster, and more efficient version of the popular BERT model, which has been fine-tuned on the SQuAD dataset for question-answering tasks. This configuration uses the `uncased` version of the BERT model, which means that it is not sensitive to the casing of the input text.
   
 * Distilbert is a small, fast, cheap, and light transformer model trained by disitilled BERT base.
 * It has 40% fewer parameters then Bert based uncased which is an older version of the model.
 * It is the best suited and latest available Question Answer problem set application with SQuAD data.
-  
-  
-  
-  
   
   
   ![Screenshot (34)](https://user-images.githubusercontent.com/117317413/206058662-3129907b-46b7-4f04-866f-2f70d823377f.png)
@@ -150,21 +154,35 @@ The Distilbert is a pre-trained model in hugging face. It is especially trained 
   
 After importing the model, the model is fit to the training dataset that we prepared and tried to fine tune the model by tweaking some hyperparameters such as number of epochs etc. While training the model it could be observed that at some point in the training, the training is getting to the least. So, in resemblence with the pocket algorithm the model is storing the most optimised parameters where it achieved the least training error and that particular weights of the model are being stored. Now, with this model we tested it on the test file that we created. We have taken a ratio of 80:20 to split the dataset into train and test respectively. Which yielded an F1 score of 0.5418, Exact Match of 0.2247191, top_n_accuracy of 0.80898. We have given an context that is not related to california but from India. Astonishingly, the model could predict well enough. 
 
-# Comparisons 
-  The 3 models built Bert base uncased, BERT large Uncased Masked Model, DistilBERT base uncased are all trained on the same train dataset and validated using the same validation dataset with a 80:20 split of the data collected. 
+# Comparisons (Mainly linear vs BERT - Vineet/Devansh / Rahul for BERT comparison)
+
   
-BERT (Bidirectional Encoder Representations from Transformers) is a type of language model that is trained to understand the context of words in a sentence. BERT "base" model is the most basic version of the BERT. The base model has 12 layers and 110 million parameters. So as expeccted that is model with the least accuracy. After running the validation on our Dataset, The Bert Base Uncased model gave around 35% accuracy.
   
-  DistilBERT is a smaller version of BERT that has been "distilled" to make it faster and more efficient while maintaining a similar level of performance. DistilBERT has 6 layers and 66 million parameters, making it about 60% the size of the base BERT model. So this model is performing slightly better than the BERT base. As in the process of making it lighter and faster, some of the accuracy is sacrificed. After running the validation on our Dataset, The DistilBERT Base Uncased model gave around 80% accuracy.
   
-  In general, the large BERT model will have better performance than the base model and DistilBERT base uncased model because it has more parameters and therefore can learn more information from the training data. After running the validation on our Dataset, The DistilBERT Base Uncased model gave around 93% accuracy. However, the large model will also be slower to train and to use for inference, so it may not be the best choice for all applications. DistilBERT is a good compromise between performance and efficiency, but it may not have the same level of performance as the larger BERT models.
-  Since for our model the most import parameter of success is predicting the answer correctly. So Bert large Uncased Masked Model is the best fit for this implementation.
-  
-  The same can be seen in the graph plotted below. Bert Base Uncased model we are getting around 35% a
   ![Result1](https://user-images.githubusercontent.com/117317413/206068803-3691327b-74da-4fda-a9e5-703deca8f30a.JPG)
+
+  
+  
+  
   
 # Example Analysis (Devansh)
 
+The below shown screenshot has one of the context from our data. In this we have few sentences about Los Angeles. Using which our model would predict the answer for the questions asked.
+  
+  
+  ![Context1](https://user-images.githubusercontent.com/117317413/206071743-a99737d5-b24d-46ff-99d6-d59bf33acfd5.JPG)
+
+  The screenshot below shows the output given by the Distilbert base uncased distilled squad model. In this it could be seen that the model answered the question       **"What are some iconic thing about the city?"**.
+  
+  For which the model predicted the answer to be **"Paramount Pictures, Universal and Warner Brothers"** with a score of 0.857. This signifies the confidence with which the answer is outputted by the model. The output includes the part of the context from which the answer is extracted and also the start and end indices of the context that has the answer.
+ 
+  
+  
+![Prediction1](https://user-images.githubusercontent.com/117317413/206071821-1bb460d6-7ab3-4217-b5eb-d38c4eafb502.JPG)
+
+  
+  
+  
 # Conclusions (Devansh)
 
 
