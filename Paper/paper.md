@@ -60,7 +60,7 @@ BERT has originally been released in base and large variations, for cased and un
   Creating Embeddings from Infersent and finding similarity
   - Create a vocabulary from the training data and use this vocabulary to train infersent model.
   - Once the model is trained, provide sentence as input to the encoder function which will return a 4096-dimensional vector irrespective of the number of words in the sentence.
-  - Break the paragraph/context into multiple sentences using the package for processing text data [Textblob](https://textblob.readthedocs.io/en/dev/). 
+  - Break the paragraph/context into multiple sentences using the package for processing text data [Textblob](https://textblob.readthedocs.io/en/dev/) Textblob. 
   - Get the vector representation of each sentence and question using Infersent mode. An example is shown below.
   <img width="1091" alt="Screen Shot 2022-12-06 at 3 52 49 PM" src="https://user-images.githubusercontent.com/37727735/206051149-7b3d601c-2dc2-422c-be39-0e83b296ba3c.png">
   - Create features like distance, based on cosine similarity and Euclidean distance for each sentence-question pair
@@ -68,16 +68,7 @@ BERT has originally been released in base and large variations, for cased and un
   ### Unsupervised model 
   Unsupervised Learning is not using the target variable. Here, the model returns the sentence from the paragraph which has the minimum distance from the given question. First the euclidean distance was used to detect the sentence having minimum distance from the question. The accuracy of this model came around 33% but, when switched to cosine similarity the accuracy improved slightly from 33% to 38%. This makes sense because euclidean distance does not care for alignment or angle between the vectors whereas cosine takes care of that. Direction is important in case of vectorial representations.
   
-  ### 1. Bert Base Uncased Model
-  Bert Base Uncased Model is a pretrained model on English language using a masked language modeling (MLM) objective. It was introduced in this [paper](https://arxiv.org/pdf/1810.04805.pdf). This model is uncased: it does not make a difference between english and English.
-  
-  
-  
-  
-  
-  
-  
-  
+  2. Bert-Base-Uncased
 
 Implemented the basic bert base uncased model for the Dataset we created by importing a model from Hugging face. Have written in detail about why choose this model in paper. To run the imported models from hugging face the data needs to be in a particular format. So parsed the data which is in json format to create 3 lists of contexts, questions and answers, which is the required format. Then created embeddings of the data using the recommended tokenizer from haystack. Using model.train command tried to fine tune the model to fit our Dataset. And checking the accuracy using a validation dataset. All this is implemented in a single Jupiter notebook in a single git commit with linkLinks to an external site.
 
@@ -121,18 +112,27 @@ Data augmentation techniques can help bring the most out of BERT data model.
 
 ### Applying Distilbert base uncased distilled squad for the dataset.
 
+DistilBert base uncased distilled squad is a state-of-the-art natural language processing (NLP) model developed by Hugging Face. It is a smaller, faster, and more efficient version of the popular BERT model, which has been fine-tuned on the SQuAD dataset for question-answering tasks. This configuration uses the `uncased` version of the BERT model, which means that it is not sensitive to the casing of the input text.
+  
 * Distilbert is a small, fast, cheap, and light transformer model trained by disitilled BERT base.
 * It has 40% fewer parameters then Bert based uncased which is an older version of the model.
 * It is the best suited and latest available Question Answer problem set application with SQuAD data.
+  
+ This model has the following configuration:
+- 12-layers
+- 768 hidden units
+- 12 attention heads 
+- 66M parameters.
 
-In this method:
-- The Distilbert is a pre-trained model in hugging face. It is especially trained for the SQuAD Dataset and Coco Dataset.
-- So, we have used the pretrained model to fit into our custom dataset. Here, a framework known as Haystack had to be imported inorder to use the libray FARMReader which is especially dedicated to import the model from hugging face.
-- After importing the model, the model is fit to the training dataset that we prepared and tried to fine tune the model by tweaking some hyperparameters such as number of epochs etc.
-- While training the model it could be observed that at some point in the training, the training is getting to the least. So, in resemblence with the pocket algorithm the model is storing the most optimised parameters where it achieved the least training error and that particular weights of the model are being stored.
-- Now, with this model we tested it on the test file that we created. We have taken a ratio of 80:20 to split the dataset into train and test respectively.
-- Which yielded an F1 score of 0.5418, Exact Match of 0.2247191, top_n_accuracy of 0.80898.
-- We have given an context that is not related to california but from India. Astonishingly, the model could predict well enough. Although, the model could not intutively eliminate the case that it cannot answer some questions from the given questions and is still trying to answer. This, brings us to the case that the data is not sufficient for the model to learn that it cannot answer all the questions using the context. We might need some more data to make the model know its limitations.
+### Implementation Details:
+
+The Distilbert is a pre-trained model in hugging face. It is especially trained for the SQuAD Dataset and Coco Dataset. So, we have used the pretrained model to fit into our custom dataset. Here, a framework known as Haystack had to be imported inorder to use the libray FARMReader which is especially dedicated to import the model from hugging face. 
+
+Embeddings in DistiBert:
+
+Word embeddings are generated using a technique called word encoding. This involves representing each word in the input text as a fixed-length vector of numbers, which captures the semantic meaning of the word in a numerical form. These vectors are then used as input to the model, allowing it to process the input text and generate a response.
+  
+After importing the model, the model is fit to the training dataset that we prepared and tried to fine tune the model by tweaking some hyperparameters such as number of epochs etc. While training the model it could be observed that at some point in the training, the training is getting to the least. So, in resemblence with the pocket algorithm the model is storing the most optimised parameters where it achieved the least training error and that particular weights of the model are being stored. Now, with this model we tested it on the test file that we created. We have taken a ratio of 80:20 to split the dataset into train and test respectively. Which yielded an F1 score of 0.5418, Exact Match of 0.2247191, top_n_accuracy of 0.80898. We have given an context that is not related to california but from India. Astonishingly, the model could predict well enough. 
 
 # Comparisons (Mainly linear vs BERT - Vineet/Devansh / Rahul for BERT comparison)
 
