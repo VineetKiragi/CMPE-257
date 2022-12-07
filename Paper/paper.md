@@ -157,6 +157,15 @@ After importing the model, the model is fit to the training dataset that we prep
 
 # Comparisons (Mainly linear vs BERT - Vineet/Devansh / Rahul for BERT comparison)
 
+  
+  
+  
+  ![Result1](https://user-images.githubusercontent.com/117317413/206068803-3691327b-74da-4fda-a9e5-703deca8f30a.JPG)
+
+  
+  
+  
+  
 # Example Analysis (Devansh)
 
 # Conclusions (Devansh)
