@@ -153,13 +153,14 @@ After importing the model, the model is fit to the training dataset that we prep
 # Comparisons 
   The 3 models built Bert base uncased, BERT large Uncased Masked Model, DistilBERT base uncased are all trained on the same train dataset and validated using the same validation dataset with a 80:20 split of the data collected. 
   
-BERT (Bidirectional Encoder Representations from Transformers) is a type of language model that is trained to understand the context of words in a sentence. BERT "base" model is the most basic version of the BERT. The base model has 12 layers and 110 million parameters. So as expeccted that is model with the least accuracy.
+BERT (Bidirectional Encoder Representations from Transformers) is a type of language model that is trained to understand the context of words in a sentence. BERT "base" model is the most basic version of the BERT. The base model has 12 layers and 110 million parameters. So as expeccted that is model with the least accuracy. After running the validation on our Dataset, The Bert Base Uncased model gave around 35% accuracy.
   
-  DistilBERT is a smaller version of BERT that has been "distilled" to make it faster and more efficient while maintaining a similar level of performance. DistilBERT has 6 layers and 66 million parameters, making it about 60% the size of the base BERT model. So this model is performing slightly better than the BERT base. As in the process of making it lighter and faster, some of the accuracy is sacrificed. 
+  DistilBERT is a smaller version of BERT that has been "distilled" to make it faster and more efficient while maintaining a similar level of performance. DistilBERT has 6 layers and 66 million parameters, making it about 60% the size of the base BERT model. So this model is performing slightly better than the BERT base. As in the process of making it lighter and faster, some of the accuracy is sacrificed. After running the validation on our Dataset, The DistilBERT Base Uncased model gave around 80% accuracy.
   
-  In general, the large BERT model will have better performance than the base model and DistilBERT base uncased model because it has more parameters and therefore can learn more information from the training data. However, the large model will also be slower to train and to use for inference, so it may not be the best choice for all applications. DistilBERT is a good compromise between performance and efficiency, but it may not have the same level of performance as the larger BERT models.
+  In general, the large BERT model will have better performance than the base model and DistilBERT base uncased model because it has more parameters and therefore can learn more information from the training data. After running the validation on our Dataset, The DistilBERT Base Uncased model gave around 93% accuracy. However, the large model will also be slower to train and to use for inference, so it may not be the best choice for all applications. DistilBERT is a good compromise between performance and efficiency, but it may not have the same level of performance as the larger BERT models.
+  Since for our model the most import parameter of success is predicting the answer correctly. So Bert large Uncased Masked Model is the best fit for this implementation.
   
-  The same can be seen in the graph plotted below.
+  The same can be seen in the graph plotted below. Bert Base Uncased model we are getting around 35% a
   ![Result1](https://user-images.githubusercontent.com/117317413/206068803-3691327b-74da-4fda-a9e5-703deca8f30a.JPG)
   
 # Example Analysis (Devansh)
