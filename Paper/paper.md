@@ -57,9 +57,16 @@ BERT has originally been released in base and large variations, for cased and un
   ### Infersent, Facebook Sentence Embedding
   The basic idea behind all these embeddings is to use vectors of various dimensions to represent entities numerically, which makes it easier for computers to understand them for various downstream tasks. Traditionally, the average of vectors of all the words in a sentence is called the bag of words approach. Each sentence is tokenized to words, vectors for these words can be found using glove embeddings and then take the average of all these vectors. This technique has performed decently, but this is not a very accurate approach as it does not take care of the order of words. But [Infersent from Facebook](https://github.com/facebookresearch/InferSent) is a sentence embeddings method that provides semantic sentence representations. It is trained on natural language inference data and generalizes well to many different tasks.
   
+  Creating Embeddings from Infersent and finding similarity
+  - Create a vocabulary from the training data and use this vocabulary to train infersent model.
+  - Once the model is trained, provide sentence as input to the encoder function which will return a 4096-dimensional vector irrespective of the number of words in the sentence.
+  - Break the paragraph/context into multiple sentences using the package for processing text data [Textblob](https://textblob.readthedocs.io/en/dev/) Textblob. 
+  - Get the vector representation of each sentence and question using Infersent mode. An example is shown below.
+  <img width="1091" alt="Screen Shot 2022-12-06 at 3 52 49 PM" src="https://user-images.githubusercontent.com/37727735/206051149-7b3d601c-2dc2-422c-be39-0e83b296ba3c.png">
+  - Create features like distance, based on cosine similarity and Euclidean distance for each sentence-question pair
   
-  
-  
+  ### Unsupervised model 
+  Unsupervised Learning is not using the target variable. Here, the model returns the sentence from the paragraph which has the minimum distance from the given question. First the euclidean distance was used to detect the sentence having minimum distance from the question. The accuracy of this model came around 33% but, when switched to cosine similarity the accuracy improved slightly from 33% to 38%. This makes sense because euclidean distance does not care for alignment or angle between the vectors whereas cosine takes care of that. Direction is important in case of vectorial representations.
   
   2. Bert-Base-Uncased
 
