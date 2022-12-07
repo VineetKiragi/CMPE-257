@@ -55,6 +55,11 @@ In order to build the dataset for our modeling methods, we used a tool called `H
 
 For each city in our training set, we have stored the context, question, and text as seen in the figure above.
 
+<p align="center">
+    <image src="assets/dataframe.png">
+    <b>Fig: Sample Dataframe for Question and Answers from Top 150 Cities in USA.</b>
+</p>
+
 # Methods
 
   ### 1. Linear Model
@@ -119,12 +124,9 @@ In this method, I explore the following:
 
 ### Data Augmentation
 
-Data augmentation techniques can help bring the most out of BERT data model.
-
-<p align="center">
-    <image src="assets/dataframe.png">
-    <b>Fig: Sample Dataframe for Question and Answers from Top 150 Cities in USA.</b>
-</p>
+Data augmentation techniques can help bring the most out of BERT data model. Distilbert model is proven to show improvement with data augmentation.
+This is evident from our model accuracy as illustrated below.
+We consider this as one of our future step.
 
 ## 4. Distilbert base uncased distilled squad for the dataset.
 
@@ -152,10 +154,9 @@ Word embeddings are generated using a technique called word encoding. This invol
 
 The Distilbert is a pre-trained model in hugging face. It is especially trained for the SQuAD Dataset and Coco Dataset. So, we have used the pretrained model to fit into our custom dataset. Here, a framework known as Haystack had to be imported inorder to use the libray FARMReader which is especially dedicated to import the model from hugging face. .
   
-After importing the model, the model is fit to the training dataset that we prepared and tried to fine tune the model by tweaking some hyperparameters such as number of epochs etc. While training the model it could be observed that at some point in the training, the training is getting to the least. So, in resemblence with the pocket algorithm the model is storing the most optimised parameters where it achieved the least training error and that particular weights of the model are being stored. Now, with this model we tested it on the test file that we created. We have taken a ratio of 80:20 to split the dataset into train and test respectively. Which yielded an F1 score of 0.5418, Exact Match of 0.2247191, top_n_accuracy of 0.80898. We have given an context that is not related to california but from India. Astonishingly, the model could predict well enough. 
+After importing the model, the model is fit to the training dataset that we prepared and tried to fine tune the model by tweaking some hyperparameters such as number of epochs etc. While training the model it could be observed that at some point in the training, the training is getting to the least. So, in resemblence with the pocket algorithm the model is storing the most optimised parameters where it achieved the least training error and that particular weights of the model are being stored. Now, with this model we tested it on the test file that we created. We have taken a ratio of 80:20 to split the dataset into train and test respectively. Which yielded an F1 score of 0.5418, Exact Match of 0.2247191, top_n_accuracy of 0.82898. We have given an context that is not related to california but from India. Astonishingly, the model could predict well enough. 
 
 # Comparisons
-
   
   ![Result1](https://user-images.githubusercontent.com/117317413/206068803-3691327b-74da-4fda-a9e5-703deca8f30a.JPG)
 
@@ -183,8 +184,6 @@ The below shown screenshot has one of the context from our data. In this we have
   
 ![Prediction1](https://user-images.githubusercontent.com/117317413/206071821-1bb460d6-7ab3-4217-b5eb-d38c4eafb502.JPG)
 
-  
-  
   
 # Conclusions
 In conclusion, the NLP-based question-answering model on the SQuAD dataset shows promising results and demonstrates the potential for natural language processing techniques to accurately answer questions based on a given context. All the 3 model's performance on the SQuAD dataset indicates that it is able to effectively understand the intent behind a question and retrieve the appropriate information from the provided context. Further research and development in this area has the potential to improve the model's performance and expand its capabilities, leading to more effective and efficient question-answering systems.
