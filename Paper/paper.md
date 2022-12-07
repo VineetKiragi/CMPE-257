@@ -55,7 +55,7 @@ In order to build the dataset for our modeling methods, we used a tool called `H
 
 For each city in our training set, we have stored the context, question, and text as seen in the figure above.
 
-# Methods
+# Methods (All)
 
   ### 1. Linear Model
   The goal of implementing the Linear model is not to reach the state of the art accuracy, but to learn different NLP concepts, implement them and explore more solutions. but to check if we could fit a Linear model with decent enough results. However, my goal is not to reach the state of the art accuracy but to learn different NLP concepts, implement them and explore more solutions. Starting with basic models to know the baseline has been the approach here. The model will focus on **Facebook sentence embeddings** and how it can be used in building QA systems.
@@ -152,24 +152,20 @@ Word embeddings are generated using a technique called word encoding. This invol
 
 The Distilbert is a pre-trained model in hugging face. It is especially trained for the SQuAD Dataset and Coco Dataset. So, we have used the pretrained model to fit into our custom dataset. Here, a framework known as Haystack had to be imported inorder to use the libray FARMReader which is especially dedicated to import the model from hugging face. .
   
-After importing the model, the model is fit to the training dataset that we prepared and tried to fine tune the model by tweaking some hyperparameters such as number of epochs etc. While training the model it could be observed that at some point in the training, the training is getting to the least. So, in resemblence with the pocket algorithm the model is storing the most optimised parameters where it achieved the least training error and that particular weights of the model are being stored. Now, with this model we tested it on the test file that we created. We have taken a ratio of 80:20 to split the dataset into train and test respectively. Which yielded an F1 score of 0.5418, Exact Match of 0.2247191, top_n_accuracy of 0.80898. We have given an context that is not related to california but from India. Astonishingly, the model could predict well enough. 
+After importing the model, the model is fit to the training dataset that we prepared and tried to fine tune the model by tweaking some hyperparameters such as number of epochs etc. While training the model it could be observed that at some point in the training, the training is getting to the least. So, in resemblence with the pocket algorithm the model is storing the most optimised parameters where it achieved the least training error and that particular weights of the model are being stored. Now, with this model we tested it on the test file that we created. We have taken a ratio of 80:20 to split the dataset into train and test respectively. Which yielded an F1 score of 0.5418, Exact Match of 0.2247191, top_n_accuracy of 0.82898. We have given an context that is not related to california but from India. Astonishingly, the model could predict well enough. 
 
 # Comparisons (Mainly linear vs BERT - Vineet/Devansh / Rahul for BERT comparison)
 
   
+  
+  
   ![Result1](https://user-images.githubusercontent.com/117317413/206068803-3691327b-74da-4fda-a9e5-703deca8f30a.JPG)
 
   
-# Example Analysis
-
-Our first step in the analysis is to know what are the important embeddings in a sentence? Our code has implemented various methods across all our preprocessing and analysis steps to find important word embeddings.
-
-For example, here is an illustration of a question, it's corelated document, and use of Nearest Neighbor method find the embeddings.
-
-<p align="center">
-    <image src="assets/vector.png">
-    <b>Fig: Sample Dataframe for Question and Answers from Top 150 Cities in USA.</b>
-</p>
+  
+  
+  
+# Example Analysis (Devansh)
 
 The below shown screenshot has one of the context from our data. In this we have few sentences about Los Angeles. Using which our model would predict the answer for the questions asked.
   
@@ -181,14 +177,13 @@ The below shown screenshot has one of the context from our data. In this we have
   For which the model predicted the answer to be **"Paramount Pictures, Universal and Warner Brothers"** with a score of 0.857. This signifies the confidence with which the answer is outputted by the model. The output includes the part of the context from which the answer is extracted and also the start and end indices of the context that has the answer.
  
   
+  
 ![Prediction1](https://user-images.githubusercontent.com/117317413/206071821-1bb460d6-7ab3-4217-b5eb-d38c4eafb502.JPG)
 
   
   
   
-# Conclusions
-In conclusion, the NLP-based question-answering model on the SQuAD dataset shows promising results and demonstrates the potential for natural language processing techniques to accurately answer questions based on a given context. All the 3 model's performance on the SQuAD dataset indicates that it is able to effectively understand the intent behind a question and retrieve the appropriate information from the provided context. Further research and development in this area has the potential to improve the model's performance and expand its capabilities, leading to more effective and efficient question-answering systems.
+# Conclusions (Devansh)
+
 
 # References
-  1. Blog on Question Answering Models [link](https://towardsdatascience.com/building-a-question-answering-system-part-1-9388aadff507)
-  2. Stanford Question Answering Dataset [link](https://www.kaggle.com/datasets/stanfordu/stanford-question-answering-dataset)
